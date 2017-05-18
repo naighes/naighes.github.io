@@ -1,3 +1,5 @@
 name: Nicola Baldi, @naighes
 markdown: kramdown
 exclude: ["README.md"]
+
+theme: jekyll-theme-hacker
