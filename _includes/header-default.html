@@ -1,0 +1,23 @@
+<header class="header-site" role="banner">
+    <div class="content">
+        <div class="person">
+            <img alt="me" src="{{site.profile_picture}}">
+        </div>
+        <h1>
+            <span class="site-title">[{{site.username}}]</span></h1>
+        <div class="icons-home">
+            <a aria-label="send email" title="send me a e-mail" href="mailto:{{site.email}}">
+                <svg class="icon icon-email"><use xlink:href="#icon-email"></use></svg></a>
+
+            <a aria-label="twitter" title="follow me on twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}">
+                <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a>
+
+            <a aria-label="github" title="my github profile" target="_blank" href="https://github.com/{{site.github_username}}">
+                <svg class="icon icon-github-alt"><use xlink:href="#icon-github-alt"></use></svg></a>
+
+            <a aria-label="linkedin" title="my linkedin profile" target="_blank" href="https://www.linkedin.com/in/{{site.linkedin_public_url}}">
+                <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg></a>
+        </div>
+    </div>
+    {% include menu-search.html %}
+</header>
