@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>{% if page.title %}{{ page.title }} - {% endif %}Naighes</title>
+  <link href="/atom.xml" rel="alternate" title="Naighes's Blog" type="application/atom+xml" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+  <link rel="stylesheet" href="/js/icons/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" id="font-bitter-css" href="https://fonts.googleapis.com/css?family=Bitter:400,700" type="text/css" media="screen" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/contents/fav.png" />
+  <link rel="search" type="application/opensearchdescription+xml" title="naighes.github.io" href="/opensearch.xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url}}" />
+  {% if page.title %}<meta property="og:title" content="{{ page.title }}" />{% endif %}
+  {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt }}" />{% endif %}
+  <meta property="og:image" content="{% if page.preview_image %}{{ page.preview_image }}{% else %}https://naighes.github.io/images/contents/NB.jpeg{% endif %}" />
+
+  <meta name="twitter:site" value="@nicolabaldi" />
+  {% if page.title %}<meta property="twitter:title" content="{{ page.title }}" />{% endif %}
+  {% if page.excerpt %}<meta property="twitter:description" content="{{ page.excerpt }}" />{% endif %}
+  <meta property="twitter:image" content="{% if page.preview_image %}{{ page.preview_image }}{% else %}https://naighes.github.io/images/contents/NB.jpeg{% endif %}"/>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  {% seo title=false %}
+</head>
+
+<body class="{{ page.section }}">
+  <div id="container">
+    <div class="wrap">
+    <div id="header">
+      <div id="branding">
+        <h1 id="site-title">
+          <a href="/" title="Nicola Baldi @naighes" rel="Home">Nicola Baldi @naighes</a>
+        </h1>
+      </div>
+
+      <div id="menu-primary" class="menu-container">
+        <div class="menu">
+          <ul id="menu-primary-items">
+            <li class="menu-item home"><a class="spec" href="/">Home</a></li>
+            <li class="menu-item projects"><a class="spec" href="/projects">Projects</a></li>
+            <!-- <li class="menu-item blog"><a class="spec" href="/blog/">Blog</a></li> -->
+            <li class="menu-item github"><a class="spec" href="https://github.com/naighes">Github</a></li>
+            <li class="menu-item rss">
+              <div class="rss-button">
+                <a href="/atom.xml" target="_blank">
+                  <img src="/images/social/RSSButton.png" alt="RSS Feed" height="20px"/>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+
+    <div id="main">

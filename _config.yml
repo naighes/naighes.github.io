@@ -1,78 +1,32 @@
-title: Nicola Baldi - personal page
-email: nic.baldi@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # for test: remove string '/space-jekyll-template' to ''
-url: "http://naighes.github.io"
-
-# User settings
-username: "Nicola Baldi"
-user_title: "software architect & developer"
-twitter_username: NicolaBaldi
-github_username:  naighes
-linkedin_public_url: "nicolabaldi"
-slideshare_url: "https://www.slideshare.net/Naighes"
-phone_number: "+39 3489128888"
-profile_picture: "https://media-exp1.licdn.com/dms/image/C4D03AQFHeLBvJbcA-A/profile-displayphoto-shrink_400_400/0?e=1595462400&v=beta&t=tsQ98hJR_7Q2vaG9o-rNZnLbPWhXgoMXOdAnapQIGwA"
-
-# Build settings
-markdown: kramdown
 highlighter: rouge
-permalink: /:title/
-
-# html minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
-
-# Links to include in menu navigation
-links:
-  section_1:
-    - title: home
-      url: /
-      key_trigger: 1
-    - title: about
-      url: /about
-      key_trigger: 2
-    - title: projects
-      url: /projects
-      key_trigger: 3
-    - title: resume
-      url: /resume
-      key_trigger: 4
-  section_2:
-    - title: github
-      url: http://www.github.com/naighes
-      external: true
-      key_trigger: g
-    - title: twitter
-      url: http://www.twitter.com/NicolaBaldi
-      external: true
-      key_trigger: t
-    - title: linkedin
-      url: https://www.linkedin.com/in/nicolabaldi/
-      external: true
-      key_trigger: l
-    - title: slideshare
-      url: https://www.slideshare.net/Naighes
-      external: true
-      key_trigger: h
-
-# projects in header index
-projects:
-  - name: carrot
-    url: https://github.com/naighes/carrot
-    description: "Carrot is a .NET lightweight library that provides a couple of facilities over RabbitMQ."
-  - name: imPOSTer
-    description: "Imposter is a lightweight and versatile tool for the mocking of web applications."
-    url: https://github.com/naighes/imposter
-  - name: fun with webgl
-    description: "just a terreain rendering sample based on webgl"
-    url: /stuff/fun-with-webgl
-
-# exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules']
+permalink: none
+kramdown:
+  input: GFM
+  hard_wrap: false
+repository: naighes/naighes.github.io
+plugins:
+  - jemoji
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /blog/:year/:month/:day/:title/
+title: Nicola Baldi @naighes
+description: Nicola's personal page and resume.
+url: https://naighes.github.io/
+author: Nicola Baldi
+twitter:
+  username: nicolabaldi
+logo: images/contents/NB.jpeg
+social:
+  name: Naighes
+  links:
+    - https://twitter.com/nicolabaldi
+    - https://www.linkedin.com/in/nicolabaldi/
+    - https://github.com/naighes
+    - https://www.slideshare.net/Naighes
