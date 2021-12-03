@@ -1,0 +1,222 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{scrextend}
+
+%\usepackage{showframe} % debugging use only
+
+\geometry{
+  letterpaper,
+  left = 0.5in,
+  right = 0.5in,
+  top = 0.6in,
+  bottom = 0.6in
+}
+
+\hypersetup{
+  colorlinks = true, 
+  linkcolor = blue, 
+  urlcolor  = blue,
+  citecolor = blue, 
+  anchorcolor = blue
+}
+
+%   CUSTOM STYLES  %
+\thispagestyle{empty} % remove page number
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
+
+%   MACROS  %
+\newcommand{\sectionStart}{
+  \begin{itemize}[label={},leftmargin=0in]
+}
+\newcommand{\sectionEnd}{
+  \end{itemize}
+}
+\newcommand{\summaryText}[1]{
+  \item
+  \begin{addmargin}[7pt]{0pt}
+    {#1}
+  \end{addmargin}
+}
+\newcommand{\companySummaryText}[1]{
+  \begin{addmargin}[15cm]{3cm}
+  {#1 \vspace{-1.8pt}}
+  \end{addmargin}\vspace{5pt}
+}
+\newcommand{\educationItem}[2]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    {#1}  & {#2}\\
+  \end{tabular*}
+  \vspace{-5pt}
+}
+\newcommand{\skillItem}[2]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{}l@{}}
+    {\textbf{#1}: } & {#2}
+  \end{tabular*}\vspace{-17pt}
+}
+\newcommand{\jobHeading}[4]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    \normalsize{\textbf{#1}} & #2 \\
+    \textit{\small#3}
+  \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\projectHeading}[4]{
+  \vspace{-1pt}
+  \item
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r@{}}
+    \normalsize{{\href{#1}{#2}} \textbf{#3}} & #4 \\
+  \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\listStart}{\begin{itemize}}
+\newcommand{\listEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\bulletItem}[1]{
+  \item
+  \small{
+    {#1 \vspace{-1.8pt}}
+  }
+}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \centerline{
+      \textbf{\href{https://naighes.github.io/}{\color{black}{\LARGE {\underline{Nicola Baldi}}}}}
+    }
+    \vspace{5pt}\\
+    \centerline{
+      \href{mailto:nic.baldi@gmail.com}{\underline{nic.baldi@gmail.com}} $\mid$
+      +39 (348) 912-8888 $\mid$
+      Github : \href{https://github.com/naighes}{\underline{naighes}} $\mid$
+      LinkedIn : \href{https://www.linkedin.com/in/nicolabaldi}{\underline{nicolabaldi}} $\mid$
+      Slideshare : \href{https://www.slideshare.net/Naighes}{\underline{Naighes}}
+    }
+  \end{tabular*}
+  \vspace{-5pt}
+
+\section{Summary}
+\sectionStart
+  \summaryText
+  {Manager, Speaker, hands-on Architect driving the vision and the technology strategy of companies to make them more effective. Open-minded, critical thinker and relentless learner never afraid of getting out of the comfort zone. Software craftsmanship, Open Source and DevOps advocate. Performance-addicted, passionate about languages and distributed/highly scalable architectures.}
+\sectionEnd
+
+\section{Technical Skills}
+\sectionStart
+  \skillItem
+    {Languages}
+    {JavaScript, Typescript, C\#, C, OCaml, Go, Swift, Kotlin}
+  \skillItem
+    {Tools}
+    {Git, Bash, Powershell, Docker, Kubernetes, Terraform, \LaTeX\ }
+  \skillItem
+    {Databases}
+    {Microsoft SQL Server, Cassandra, DynamoDB, MongoDB, Redis}
+  \skillItem
+    {Methodologies}
+    {Agile Methodologies (mainly XP), CI and CD, TDD, IaaC}
+  \vspace{3pt}
+\sectionEnd
+  
+%   EXPERIENCE   %
+\section{Experience}
+\sectionStart
+  \jobHeading
+    {Senior Software Architect and Developer}
+    {Nov 2016 - Present}
+    {YOOX NET-A-PORTER Group}
+  \sectionStart
+    \summaryText
+    {The world's leading online luxury fashion retailer, with 4 multi-brand online stores and 40 online flagship stores, YOOX NET-A-PORTER GROUP has around 500 developers out of 5000 employees, offices and operations in the USA, Europe, Japan, China and Hong Kong and delivers to more than 180 countries and 3 million customers around the world.}
+  \sectionEnd
+  \listStart
+    \bulletItem
+    {Mentored the yoox.com area towards the adoption of a cloud-native approach.}
+    \bulletItem
+    {Led the migration of yoox.com application ecosystem from on-premises to hybrid cloud to public cloud (AWS).}
+    \bulletItem
+    {Drove the adoption of containers with Docker and Kubernetes moving from VMs to AWS ECS and AWS EKS resulting in a significant reduction in time to market.}
+    \bulletItem
+    {Led the design and the implementation of fully automated ``on demand" environments by defining the software and infrastructure development life cycles, detailing workflow, tools and practices: sizing, usage, provisioning, configuration management, versioning, testing, development, deployment, release management.}
+    \bulletItem
+    {Defined the strategy for observability: access/error/audit logging, monitoring, alerting and distributed tracing.}
+    \bulletItem
+    {Held training sessions and created internal communities.}
+  \listEnd
+  \sectionStart
+    \skillItem
+    {Key technologies}
+    {Go, Typescript, Terraform, Docker, K8S, Jaeger, Prometheus, React/Redux, C\#, GraphQL}
+  \sectionEnd
+\sectionEnd
+
+\sectionStart
+  \jobHeading
+    {Head of Back-end Platform Architecture}
+    {Feb 2014 - November 2016}
+    {YOOX Group}
+  \sectionStart
+    \summaryText
+    {YOOX Group, a global Internet retailing partner for leading fashion & design brands. YOOX has established itself amongst the market leaders with the multi-brand stores yoox.com, thecorner.com and shoescribe.com, as well as with numerous mono-brand online stores such as Diesel, Armani, Bottega Veneta and Dolce & Gabbana.}
+  \sectionEnd
+  \listStart
+    \bulletItem
+    {Provided guidance to the fulfillment department along the journey for the shift to the omni-channel capabilities.}
+    \bulletItem
+    {Defined group-wide and multi-tenant API implementation guidelines to improve platform stability, maintainability and make its evolution easier (ReST architectural style with particular emphasis on HATEOAS and in complementarity with GraphQL for a safer service-to-service communication).}
+    \bulletItem
+    {Complete rewrite of the Order Management System to adopt an event-driven architecture guaranteeing a seamless integration with the new Warehouse Management System and London based Net-A-Porter logistic hubs.}
+    \bulletItem
+    {Increased conversion rate with a minimum cost impact by means of AWS Lambda serverless solutions.}
+    \bulletItem
+    {Overhauled the catalog generation process reducing processing time by 50\%.}
+    \bulletItem
+    {Defined the engineering department interview assessment criteria and tests in collaboration with the people team.}
+  \listEnd
+  \sectionStart
+    \skillItem
+    {Key technologies}
+    {RabbitMQ, Docker, Apache Solr, SQL Server, MongoDB, AWS DynamoDB, AWS Lambda}
+  \sectionEnd
+\sectionEnd
+
+\sectionStart
+  \jobHeading
+    {Software Developers Manager}
+    {Jun 2013 - Feb 2014}
+    {YOOX Group}
+\sectionEnd
+
+\sectionStart
+  \jobHeading
+    {Software Developer}
+    {Jan 2011 - May 2013}
+    {LUISAVIAROMA}
+\sectionEnd
+
+\sectionStart
+  \jobHeading
+    {Software Developer}
+    {May 2007 - Jan 2011}
+    {ATOdesign s.r.l.}
+\sectionEnd
+
+\section{Education}
+\sectionStart
+  \educationItem
+    {BD, Faculty of Computer Science (Università di Pisa)} 
+    {ongoing} 
+  \educationItem
+    {ITIS E. Fermi Lucca}{}
+\sectionEnd
+
+\end{document}

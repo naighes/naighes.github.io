@@ -22,8 +22,12 @@ layout: default
             Imposter is a lightweight and versatile tool for the mocking of web applications.</li>
 
         <li>
-            <a href="/stuff/fun-with-webgl" target="_blank">fun with webgl</a>:
+            <a href="/stuff/fun-with-webgl">fun with webgl</a>:
             Just a terreain rendering sample based on webgl.</li>
+
+        <li>
+            <a href="https://github.com/naighes/unipi_app">unipi-app</a>:
+            A student-made HTTP API for easy access to unipi stuff; an always up-to-date version is hosted <a href="https://unipi-api.herokuapp.com">here</a>.</li>
       </ul>
     </div>
   </div>
